@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toko Aplikasi Mobile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="https://i.postimg.cc/63hFYPXj/file-00000000e3c861f8bf51367139844853.png/200x100.png?text=Logo" alt="Logo Toko" class="header-logo">
+     
+</header>
+
+<div class="controls">
+    <input type="text" id="searchInput" placeholder="Cari aplikasi..." oninput="filterApps()">
+    <select id="categorySelect" onchange="filterApps()">
+        <option value="all">Semua Kategori</option>
+        
+    </select>
+</div>
+
+<div class="app-container" id="appContainer"></div>
+
+<!-- Modal Detail Aplikasi -->
+<div class="modal" id="appModal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="App Image">
+        <h2 id="modalName">Nama Aplikasi</h2>
+        <p id="modalCategory">Kategori: </p>
+        <p id="modalDescription">Deskripsi aplikasi...</p>
+        <p class="price" id="modalPrice">Harga: </p>
+        <button id="modalBuyBtn">Beli Sekarang</button>
+        <p>Bayar via DANA: 0895-3654-62393 atas nama (E** Novi*****)</p>
+        <!-- Ganti src QR code DANA -->
+        <img class="qr-code" src="https://i.postimg.cc/SsXn4sFB/shareqr.png" alt="QR Code DANA">
+        <button id="modalConfirmBtn">Konfirmasi Pembayaran</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
